@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ComeGames Academy — premium tutorials for game development, programming, AI and web.">
+  <title>ComeGames Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav">
+    <a class="brand" href="#">
+      <span class="brand-mark">C</span>
+      <span>Come<span>Games</span></span>
+    </a>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <nav class="nav-links">
+      <a href="#courses">Courses</a>
+      <a href="#categories">Categories</a>
+      <a href="#latest">Latest</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#courses">Start learning ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> THE NEXT LEVEL OF LEARNING</div>
+        <h1>Learn. Build.<br><em>Create.</em></h1>
+        <p>Premium video tutorials for creators who want to build games, master code, explore AI and ship real projects.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#courses">Explore tutorials <span>→</span></a>
+          <a class="btn ghost" href="#latest">Watch latest <span>▶</span></a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="courseCount">12+</strong><small>Tutorials</small></div>
+          <div><strong>4</strong><small>Categories</small></div>
+          <div><strong>100%</strong><small>Free to start</small></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="orb orb-a"></div><div class="orb orb-b"></div>
+        <div class="floating-card fc-top"><span>● LIVE</span><b>New tutorial<br>dropping soon</b></div>
+        <div class="screen-card">
+          <div class="screen-top"><i></i><i></i><i></i><span>comegames / academy</span></div>
+          <div class="code">
+            <span class="purple">const</span> <span class="blue">future</span> = <span class="orange">create</span>({<br>
+            &nbsp;&nbsp;skills: [<span class="green">'code'</span>, <span class="green">'games'</span>, <span class="green">'AI'</span>],<br>
+            &nbsp;&nbsp;mode: <span class="green">'build'</span><br>
+            });<br><br>
+            <span class="blue">future</span>.<span class="orange">ship</span>();
+          </div>
+          <div class="play"><span>▶</span></div>
+        </div>
+        <div class="floating-card fc-bottom"><span>⚡</span><b>Project-based<br>learning</b></div>
+      </div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="section-head">
+        <div><div class="eyebrow">FEATURED</div><h2>Build something <em>real.</em></h2></div>
+        <div class="filters" id="filters">
+          <button class="active" data-filter="All">All</button>
+          <button data-filter="Game Development">Games</button>
+          <button data-filter="Programming">Code</button>
+          <button data-filter="AI">AI</button>
+          <button data-filter="Web Development">Web</button>
+        </div>
+      </div>
+      <div class="course-grid" id="courseGrid"></div>
+    </section>
+
+    <section class="section categories" id="categories">
+      <div class="section-head">
+        <div><div class="eyebrow">LEARNING PATHS</div><h2>Choose your <em>world.</em></h2></div>
+      </div>
+      <div class="category-grid">
+        <button class="category" data-jump="Game Development"><span>🎮</span><b>Game Development</b><small>Unity · Unreal · C#</small><strong>→</strong></button>
+        <button class="category" data-jump="Programming"><span>⌘</span><b>Programming</b><small>JS · Python · C++</small><strong>→</strong></button>
+        <button class="category" data-jump="AI"><span>✦</span><b>Artificial Intelligence</b><small>AI · APIs · Automation</small><strong>→</strong></button>
+        <button class="category" data-jump="Web Development"><span>◈</span><b>Web Development</b><small>HTML · CSS · JavaScript</small><strong>→</strong></button>
+      </div>
+    </section>
+
+    <section class="latest section" id="latest">
+      <div class="section-head">
+        <div><div class="eyebrow">JUST DROPPED</div><h2>Latest <em>tutorials.</em></h2></div>
+        <span class="small-note">Replace demo videos with your YouTube links later.</span>
+      </div>
+      <div class="latest-list" id="latestList"></div>
+    </section>
+
+    <section class="watch section" id="watch">
+      <div class="watch-copy">
+        <div class="eyebrow">WATCH & LEARN</div>
+        <h2>Your next <em>project</em> starts here.</h2>
+        <p>Select any tutorial above. This player is ready for YouTube, Vimeo or direct MP4 links.</p>
+        <a class="btn primary" href="#courses">Browse tutorials →</a>
+      </div>
+      <div class="player" id="player">
+        <div class="player-placeholder">
+          <div class="big-play">▶</div>
+          <b id="playerTitle">Select a tutorial to start</b>
+          <span id="playerMeta">Your video will appear here</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="about-box">
+        <div class="eyebrow">WHY COMEGAMES</div>
+        <h2>Less theory.<br><em>More building.</em></h2>
+        <p>ComeGames Academy is designed around practical, project-first learning. Add your own tutorials over time and turn this landing page into a complete video library.</p>
+        <div class="mini-features">
+          <span>✓ Project based</span><span>✓ Short & focused</span><span>✓ Beginner friendly</span><span>✓ Always growing</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="brand-mark">C</span><span>Come<span>Games</span></span></div>
+    <p>© 2026 ComeGames Academy. Build your next thing.</p>
+    <a href="mailto:contact@comegames.com">contact@comegames.com</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
